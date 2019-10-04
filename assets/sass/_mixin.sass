@@ -1,0 +1,105 @@
+// Clear Booth
+@mixin clrfix
+  &:after
+    display: block
+    content: ""
+    clear: both
+
+// Display Flex
+@mixin flex
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+
+// Flex Direction Column
+@mixin flex-direction-column
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
+  flex-direction: column
+
+// Flex Direction Row
+@mixin flex-direction-row
+  -webkit-flex-direction: row
+  -ms-flex-direction: row
+  flex-direction: row
+
+// Flex Align Items Center
+@mixin flex-align-items-center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+
+// justify-content: flex-start
+@mixin flex-justify-content-start
+  -webkit-justify-content: flex-start
+  justify-content: flex-start
+
+// justify-content: flex-start
+@mixin flex-justify-content-end
+  -webkit-justify-content: flex-end
+  justify-content: flex-end
+
+// No highligt text
+@mixin no-selection
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+// Scrollbar design
+@mixin scroll-bar-design
+  // Chrome
+  &::-webkit-scrollbar-track
+    background: transparent
+    border-radius: 0px
+
+  &::-webkit-scrollbar 
+    width: 10px
+    padding: 0 5px
+
+  &::-webkit-scrollbar-thumb
+    background: #c6d0d7
+    border-radius: 10px
+
+  &::-webkit-scrollbar-thumb:hover
+    background: darken(#c6d0d7, 5%)
+
+  // IE
+  scrollbar-face-color: #c6d0d7
+  scrollbar-arrow-color: #fff
+  scrollbar-track-color: #fff
+  scrollbar-shadow-color: #c6d0d7
+
+
+// Customize Checkbox
+@mixin customizeCheckbox
+
+    &:hover
+        input ~ .checkmark
+            background: lighten($primary-color, 43%)
+            border-color: $primary-color
+
+    input
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+        &:checked ~ .checkmark
+            background: $primary-color url(../images/check-wyt-icon.png) no-repeat center center
+            border-color: $primary-color
+
+    .checkmark
+        position: absolute
+        top: 0
+        left: 0
+        height: 18px
+        width: 18px
+        border-radius: 4px
+        background: $white
+        border: 1px solid $gray
+        z-index: 1
+        transition: border-color .2s
+

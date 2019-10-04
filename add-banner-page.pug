@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+    head
+        include _includes/_head.pug
+
+    body
+        main#container
+            .grayscale
+            header#header
+                .holder
+                    .holder__left
+                        h1 책을 보면
+                    .holder__right
+                        ul.lang-switch__case
+                            li
+                                span Language:
+                                .custom-select
+                                    select(value="Name", tabindex="-1")
+                                        option(value="0") English
+                                        option(value="1") Korean
+                                        option(value="2") Japanese
+                                        option(value="3") Bicol
+                            li
+                                span.case_separator
+                            li
+                                span.app-switch
+                                    label.app-switch__toggle
+                                        input(type="checkbox", checked).switch-btn
+                                        span.app-switch__slider
+
+            .action-holder
+                .holder
+                    .holder__left
+                        span.action-title Add Banner
+                        span.action-title__sub Upload your banner to show it on your mall
+
+                    .holder__right
+                        button(type="button", onclick="window.location.href='index.html'").btn.btn__gray.btn__medium.mgn-right
+                            span.btn__txt Cancel
+                        button(type="button", rel="deleteBanner").btn.btn__redish.btn__medium.mgn-right
+                            span.btn__txt Delete
+                        button(type="button").btn.btn__green.btn__medium
+                            span.btn__txt Save
+                    
+
+            
+                
+
+                                    
+
+
+
+
+include _includes/_script.pug

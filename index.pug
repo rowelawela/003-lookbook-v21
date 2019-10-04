@@ -1,0 +1,239 @@
+doctype html
+html(lang="en")
+    head
+        include _includes/_head.pug
+
+    body
+        main#container
+            .grayscale
+            header#header
+                .holder
+                    .holder__left
+                        h1 책을 보면
+                    .holder__right
+                        ul.lang-switch__case
+                            li
+                                span Language:
+                                .custom-select
+                                    select(value="Name", tabindex="-1")
+                                        option(value="0") English
+                                        option(value="1") Korean
+                                        option(value="2") Japanese
+                                        option(value="3") Bicol
+                            li
+                                span.case_separator
+                            li
+                                span.app-switch
+                                    label.app-switch__toggle
+                                        input(type="checkbox", checked).switch-btn
+                                        span.app-switch__slider
+
+
+            // Add banner link                          
+            - var addBannerLink = "add-banner-page.html"
+
+
+            .action-holder
+                .holder
+                    .holder__left
+                        span.action-title Select Banner
+
+                    .holder__right
+                        button(type="button").btn.btn__green.btn__medium.mgn-right
+                            span.btn__icon
+                                img(src="../../assets/images/maximize-icon.png")
+                            span.btn__txt Choose banner location
+                        a(href=addBannerLink)
+                            button(type="button").btn.btn__green.btn__medium
+                                span.btn__icon
+                                    img(src="../../assets/images/plus-icon.png")
+                                span.btn__txt Add Banner
+
+
+
+            
+            section#section
+                ul.sortable
+
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-1.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 New arrivals collections
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox", checked).item-switch-btn
+                                            span.item-switch__slider
+
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-2.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 Tops collection for woman
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox", checked).item-switch-btn
+                                            span.item-switch__slider
+                    
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-3.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 Season Off
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox").item-switch-btn
+                                            span.item-switch__slider
+
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-4.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 A month of free delivery
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox", checked).item-switch-btn
+                                            span.item-switch__slider
+                    
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-5.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 New Outer collectons
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox", checked).item-switch-btn
+                                            span.item-switch__slider
+
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-6.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 Season sale
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox", checked).item-switch-btn
+                                            span.item-switch__slider
+
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-7.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 New arrivals collections
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox").item-switch-btn
+                                            span.item-switch__slider
+
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-8.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 New arrivals, jeans collections
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox", checked).item-switch-btn
+                                            span.item-switch__slider
+
+                    li
+                        .item
+                            .item__left-holder
+                                img(src="../../assets/images/item-9.png", alt="")
+                            .item__right-holder
+                                .info
+                                    h2 New arrivals collections
+                                    span.date 2018/03/07
+                                .btn-holder
+                                    a(href=addBannerLink).item-link View
+
+                                    span.item-switch
+                                        label.item-switch__toggle
+                                            input(type="checkbox", checked).item-switch-btn
+                                            span.item-switch__slider
+
+
+
+            footer#footer
+                ul.pagination
+                    li
+                        a(href="#")
+                            img(src="../../assets/images/arrow-left.svg", alt="").
+                    li
+                        label.pagi-btn
+                            input(type="radio", name="1", checked="true")
+                            span 1
+                        
+                    li
+                        label.pagi-btn
+                            input(type="radio", name="1")
+                            span 2
+                        
+                    li
+                        label.pagi-btn
+                            input(type="radio", name="1")
+                            span 3
+
+                    li
+                        label.pagi-btn
+                            input(type="radio", name="1")
+                            span 4
+                                                   
+                    li
+                        a(href="#")
+                            img(src="../../assets/images/arrow-right.svg", alt="") 
+
+                                       
+  
+
+
+
+
+include _includes/_script.pug
